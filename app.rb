@@ -23,6 +23,12 @@ get('/contact_find') do
     erb(:contact_find)
 end
 
+get('/contact_details') do
+  @contact=Contact.find(params.fetch('id').to_i())
+  erb(:contact_details)
+end
+
+
 post('/contact_list') do
   first_name = params.fetch('first_name')
   last_name = params.fetch('last_name')
