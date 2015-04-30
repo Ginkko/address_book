@@ -1,5 +1,5 @@
 class Phone
-
+@@phones = []
   attr_reader(:mobile_number, :home_number)
 
   def initialize(numbers)
@@ -8,5 +8,12 @@ class Phone
 
   end
 
+  def store
+    @@phones.push(self)
+  end
+
+  def self.all
+    @@phones
+  end
 
 end
