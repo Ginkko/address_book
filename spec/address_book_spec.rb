@@ -3,7 +3,8 @@ require 'contact'
 require 'phone'
 require 'pry'
 require 'email'
-
+require 'home_address'
+require 'office_address'
 describe(Contact) do
   # before() do
   #   Contact.clear()
@@ -60,5 +61,16 @@ describe(Email) do
       expect(test_email.personal()).to(eq("incubusalec@gmail.com"))
     end
   end
+
+end
+
+describe(HomeAddress) do
+  describe('street_address') do
+    it('provides the street number of the home address') do
+      test_home_address = HomeAddress.new(street_address:'1234 Easy Street', city:'Portland',state: 'OR', zip: '97214')
+      expect(test_home_address.street_address()).to(eq("1234 Easy Street"))
+    end
+  end
+
 
 end
