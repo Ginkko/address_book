@@ -7,4 +7,6 @@ class Phone
     @home_number = numbers.fetch(:home_number)
 
   end
+
+
 end
