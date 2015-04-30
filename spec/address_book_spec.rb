@@ -57,6 +57,13 @@ describe(Contact) do
     end
   end
 
+  describe(".find") do
+    it('finds a contact in the list of contacts') do
+      test_contact = Contact.new(first_name: "Chuck-e", last_name: 'Cheese')
+      test_contact.store()
+      expect(Contact.find(0)).to(eq(test_contact))
+    end
+  end
 end
 
 describe(Phone) do
