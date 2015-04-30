@@ -32,7 +32,12 @@ describe(Contact) do
   end
 
   describe("add_email") do
+    it('adds an email to the contact form') do
+      test_contact = Contact.new(first_name: "Chuck-e", last_name: 'Cheese')
+      test_email = Email.new(personal: "incubusalec@gmail.com", work: "Alec.Arme@gmail.com")
+      expect(test_contact.add_email(test_email)).to(eq(test_contact.email()))
     end
+  end
 
 
 end
