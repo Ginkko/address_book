@@ -40,6 +40,14 @@ describe(Contact) do
     end
   end
 
+  describe("add_home_address") do
+    it('adds an home address to the contact form') do
+      test_contact = Contact.new(first_name: "Chuck-e", last_name: 'Cheese')
+      test_home_address = HomeAddress.new(street_address:'1234 Easy Street', city:'Portland',state: 'OR', zip: '97214')
+      expect(test_contact.add_home_address(test_home_address)).to(eq(test_contact.home_address()))
+    end
+  end
+
 
 end
 
@@ -65,6 +73,7 @@ describe(Email) do
 end
 
 describe(HomeAddress) do
+
   describe('street_address') do
     it('provides the street number of the home address') do
       test_home_address = HomeAddress.new(street_address:'1234 Easy Street', city:'Portland',state: 'OR', zip: '97214')
