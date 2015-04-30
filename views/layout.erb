@@ -1,0 +1,35 @@
+<!DOCTYPE #html>
+<html>
+  <head>
+    <title>Address Book</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  </head>
+  <body>
+    <div class='container'>
+      <%= yield %>
+    </div>
+  </body>
+  <foot>
+    <row>
+    <!-- <div class ='form-group'> -->
+
+        <div class ='col-md-4 text-center'>
+          <form action='/contact_add' method='get'>
+            <button class='btn btn-link' id='contact_add' type='submit'>Add a Contact</button>
+          </form>
+        </div>
+        <div class='col-md-4 text-center'>
+          <form action='/contact_find' method='get'>
+            <button class='btn btn-link' id='contact_find' type='submit'>Search Contacts</button>
+          </form>
+        </div>
+        <div class='col-md-4 text-center'>
+          <form action='/contact_list' method='get'>
+            <button class='btn btn-link' id='contact_list' type='submit'>Contact List</button>
+          </form>
+        </div>
+
+    <!-- </div> -->
+  </row>
+  </foot>
+</html>
