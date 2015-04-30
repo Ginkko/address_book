@@ -1,4 +1,6 @@
 class Contact
+@@all_contacts = []
+
 attr_reader(:first_name, :last_name, :phone, :email, :home_address)
 
   def initialize(attributes)
@@ -19,5 +21,18 @@ attr_reader(:first_name, :last_name, :phone, :email, :home_address)
 
   def add_home_address(address)
     @home_address = address
+  end
+
+  def store
+    @@all_contacts.push(self)
+  end
+
+  def self.all
+    @@all_contacts
+  end
+
+  def self.clear
+    @@all_contacts = []
+
   end
 end
