@@ -6,4 +6,6 @@ attr_reader(:first_name, :last_name)
     @last_name = attributes.fetch(:last_name)
   end
 
+
+
 end
