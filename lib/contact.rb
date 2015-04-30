@@ -9,6 +9,7 @@ attr_reader(:first_name, :last_name, :phone, :email)
   end
 
   def add_phone(phone)
+    binding.pry
      @phone = phone
   end
 
