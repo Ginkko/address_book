@@ -2,6 +2,7 @@ require 'rspec'
 require 'contact'
 require 'phone'
 require 'pry'
+require 'email'
 
 describe(Contact) do
   # before() do
@@ -30,6 +31,10 @@ describe(Contact) do
     end
   end
 
+  describe("add_email") do
+    end
+
+
 end
 
 describe(Phone) do
@@ -37,11 +42,18 @@ describe(Phone) do
   describe("mobile_number") do
     it('provides the mobile number of the contact') do
       test_phone = Phone.new(mobile_number: "503.206.9361", home_number: "941.349.4422")
-
+      expect(test_phone.mobile_number()).to(eq("503.206.9361"))
     end
-
   end
 
+end
 
+describe(Email) do
+  describe("personal") do
+    it('provides the personal email address of the contact') do
+      test_email = Email.new(personal: "incubusalec@gmail.com", work: "Alec.Arme@gmail.com")
+      expect(test_email.personal()).to(eq("incubusalec@gmail.com"))
+    end
+  end
 
 end
